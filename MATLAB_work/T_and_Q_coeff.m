@@ -1,52 +1,54 @@
+function [TQ] = T_and_Q_coeff(TQ)
 % density of water in (kg/m^3)
-rho = 1000;
+TQ.rho = 1000;
 %propeller diameter
-D = 0.019;
+TQ.D = 0.019;
 %pitch angle in (m) 
-pitch = 0.010;
+TQ.pitch = 0.008;
 %P/D ratio
-P_D_ratio = pitch/D;
+TQ.P_D_ratio = TQ.pitch/TQ.D;
 %blade area ratio
-b_area = 80/1000000;
-disk_area = (pi*(9.5^2)/1000000);
-BAR = b_area/disk_area;
+TQ.b_area = 194/1000000;
+TQ.disk_area = (pi*(9.5^2)/1000000);
+TQ.BAR = TQ.b_area/TQ.disk_area;
 %number of blades
-n= 6;
+TQ.n= 4;
 
 % computing KT and KQ for advanced velocities u_a
-u_a = 0.1:0.1:6.2; 
-for  i = 1:length(u_a)
-    [KT(i),KQ(i)] = wageningen(u_a(i), P_D_ratio, BAR, n);
+TQ.u_a = 0.1:0.1:6.2; 
+for  i = 1:length(TQ.u_a)
+    [TQ.KT(i),TQ.KQ(i)] = wageningen(TQ.u_a(i), TQ.P_D_ratio, TQ.BAR, TQ.n);
 end
 
 %Bollard pull
-[KT_0,KQ_0] = wageningen(0, P_D_ratio, BAR, n);
+[TQ.KT_0,TQ.KQ_0] = wageningen(0, TQ.P_D_ratio, TQ.BAR, TQ.n);
 
 %Thrust_Forces
-RPM = 100:100:6200;
-RPS = RPM/60;
+TQ.RPM = 100:100:6200;
+TQ.RPS = TQ.RPM/60;
 
-T = rho* D^4* KT_0* RPS.*abs(RPS);
+%thrust vs rpm equation
+TQ.T = TQ.rho* TQ.D^4* TQ.KT_0* TQ.RPS.*abs(TQ.RPS);
 
 %Torque
-Q = rho*D^5*KQ_0*RPS.*abs(RPS);
+TQ.Q = TQ.rho*TQ.D^5*TQ.KQ_0*TQ.RPS.*abs(TQ.RPS);
 
 %computing open-water coefficient
-J_a = u_a/(RPS*D);
+TQ.J_a = TQ.u_a/(TQ.RPS*TQ.D);
 
-eta_O = (J_a*KT)/(2*pi*KQ);
-power  = 2*pi*KQ;
+TQ.eta_O = (TQ.J_a*TQ.KT)/(2*pi*TQ.KQ);
+TQ.power  = 2*pi*TQ.KQ;
 %KT/KQ graph and computing thruster open-water efficiency
-Jdata = 0:0.01:J_a;
+TQ.Jdata = 0:0.01:TQ.J_a;
 
-for  j = 1:length(Jdata)
-    [KTdata(j),KQdata(j)] = wageningen(Jdata(j), P_D_ratio, BAR, n);
+for  j = 1:length(TQ.Jdata)
+    [TQ.KTdata(j),TQ.KQdata(j)] = wageningen(TQ.Jdata(j), TQ.P_D_ratio, TQ.BAR, TQ.n);
 end
 
-figure(1),plot(Jdata, KTdata, 'rd-', Jdata, KQdata, 'ko-'); xlabel('advanced\_velocity'); title('KT, KQ vs advanced velocities'); grid on;
-alpha = polyfit(Jdata,KTdata,1)
-beta = polyfit(Jdata,KTdata,1)
+figure(1),plot(TQ.Jdata, TQ.KTdata, 'rd-', TQ.Jdata, TQ.KQdata, 'ko-'); xlabel('advanced\_velocity'); title('KT, KQ vs advanced velocities'); grid on;
+TQ.alpha = polyfit(TQ.Jdata,TQ.KTdata,1);
+TQ.beta = polyfit(TQ.Jdata,TQ.KTdata,1);
 %T/RPM graph
-figure(2); plot(RPM, T, 'ro-');xlabel("RPM");ylabel("Thrust");title("Thrust vs RPM");grid on; 
-figure(3); plot(power, T, 'G+-');xlabel("Power");ylabel("Thrust");title("Thrust vs Power");grid on;
+figure(2); plot(TQ.RPM, TQ.T, 'ro-');xlabel("RPM");ylabel("Thrust");title("Thrust vs RPM");grid on; 
+figure(3); plot(TQ.power, TQ.T, 'G+-');xlabel("Power");ylabel("Thrust");title("Thrust vs Power");grid on;
 %figure(4); plot(u_a,T,'ko-');xlabel("speed");ylabel("thrust");title("thrust vs speed");grid on;
