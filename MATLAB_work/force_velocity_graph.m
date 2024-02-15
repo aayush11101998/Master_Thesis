@@ -4,20 +4,12 @@ function [FVG] = force_velocity_graph(FVG)
     FVG.velocity = file.velocity_500; %input xdata
     FVG.velocity1 = file.velocity_200; %input
     FVG.velocity2 = file.velocity_100; %input
-%velocity = table2array(velocity);
-%velocity1 = table2array(velocity1);
-%velocity2 = table2array(velocity2);
+
 
     FVG.force = file.force_500; %output ydata
     FVG.force1 = file.force_200; %output
     FVG.force2 = file.force_100; %output
 
-%drag_coefficient = file.dragforcesandstaticthrust1(1:6,4);
-%drag_coefficient1 = file.dragforcesandstaticthrust1(8:13, 4);
-%drag_coefficient2 = file.dragforcesandstaticthrust1(15:20,4);
-%force = table2array(force);
-%force1 = table2array(force1);
-%force2 = table2array(force2);
     
     FVG.lim = [0,35];
     FVG.lim1 = [0,35];
@@ -36,9 +28,6 @@ function [FVG] = force_velocity_graph(FVG)
     FVG.Coefficient5 = var2(1);
     FVG.Coefficient6 = var2(2);
 
-%drag_coefficient = table2array(drag_coefficient);
-%drag_coefficient1 = table2array(drag_coefficient1);
-%drag_coefficient2 = table2array(drag_coefficient2);
 
 figure(1); plot(FVG.velocity, FVG.force, 'o-', FVG.velocity, fun(var,FVG.velocity), 'rd-'); xlabel('velocity'); ylabel('force'); title('force vs velocity(500mm)'); grid on;
 figure(2); plot(FVG.velocity1, FVG.force1, 'o-', FVG.velocity1, fun(var1,FVG.velocity1), 'rd-'); xlabel('velocity'); ylabel('force'); title('force vs velocity(200mm)'); grid on;
