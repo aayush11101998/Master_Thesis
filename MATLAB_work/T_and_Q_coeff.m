@@ -4,11 +4,11 @@ TQ.rho = 1000;
 %propeller diameter
 TQ.D = 0.019;
 %pitch angle in (m) 
-TQ.pitch = 0.008;
+TQ.pitch = 0.0117;
 %P/D ratio
 TQ.P_D_ratio = TQ.pitch/TQ.D;
 %blade area ratio
-TQ.b_area = 194/1000000;
+TQ.b_area = 200.25/1000000;
 TQ.disk_area = (pi*(9.5^2)/1000000);
 TQ.BAR = TQ.b_area/TQ.disk_area;
 %number of blades
@@ -30,7 +30,7 @@ TQ.RPS = TQ.RPM/60;
 %thrust vs rpm equation
 TQ.T = TQ.rho* TQ.D^4* TQ.KT_0* TQ.RPS.*abs(TQ.RPS);
 
-%Torque
+%Torque vs RPM equation
 TQ.Q = TQ.rho*TQ.D^5*TQ.KQ_0*TQ.RPS.*abs(TQ.RPS);
 
 %computing open-water coefficient
@@ -45,10 +45,11 @@ for  j = 1:length(TQ.Jdata)
     [TQ.KTdata(j),TQ.KQdata(j)] = wageningen(TQ.Jdata(j), TQ.P_D_ratio, TQ.BAR, TQ.n);
 end
 
-figure(1),plot(TQ.Jdata, TQ.KTdata, 'rd-', TQ.Jdata, TQ.KQdata, 'ko-'); xlabel('advanced\_velocity'); title('KT, KQ vs advanced velocities'); grid on;
+figure(1),plot(TQ.Jdata, TQ.KTdata, 'rd-', TQ.Jdata, TQ.KQdata, 'ko-');legend('KT', 'KQ'); xlabel('advanced\_velocity'); ylabel('KT(-) and KQ(-)');title('KT, KQ vs advanced velocities'); grid on;
 TQ.alpha = polyfit(TQ.Jdata,TQ.KTdata,1);
 TQ.beta = polyfit(TQ.Jdata,TQ.KTdata,1);
 %T/RPM graph
-figure(2); plot(TQ.RPM, TQ.T, 'ro-');xlabel("RPM");ylabel("Thrust");title("Thrust vs RPM");grid on; 
-figure(3); plot(TQ.power, TQ.T, 'G+-');xlabel("Power");ylabel("Thrust");title("Thrust vs Power");grid on;
+figure(2); plot(TQ.RPM, TQ.T, 'ro-');xlabel("velocity (RPM)");ylabel("Thrust (N)");title("Thrust vs RPM");grid on; 
+figure(3); plot(TQ.power, TQ.T, 'G+-');xlabel("Power (W)");ylabel("Thrust (N)");title("Thrust vs Power");grid on;
+figure(4); plot(TQ.RPM, TQ.Q, 'ro-');xlabel("velocity (RPM)");ylabel("Torque (Nm)");title("Torque vs RPM");grid on; 
 %figure(4); plot(u_a,T,'ko-');xlabel("speed");ylabel("thrust");title("thrust vs speed");grid on;
