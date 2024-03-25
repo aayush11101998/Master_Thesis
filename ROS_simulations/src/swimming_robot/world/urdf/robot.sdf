@@ -1,0 +1,170 @@
+<sdf version='1.7'>
+  <model name='swimming_robot'>
+    <link name='base_link_robot'>
+      <inertial>
+        <pose>6e-06 -7.1e-05 -0.042499 0 -0 0</pose>
+        <mass>0.227002</mass>
+        <inertia>
+          <ixx>0.000123547</ixx>
+          <ixy>-1.49017e-07</ixy>
+          <ixz>-5.68626e-09</ixz>
+          <iyy>0.000155811</iyy>
+          <iyz>-1.68789e-09</iyz>
+          <izz>0.00013041</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_robot_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/base_link_robot_collision.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_robot_fixed_joint_lump__link_propstat1_collision_1'>
+        <pose>-0.023 0 -0.0365 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_propstat1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_robot_fixed_joint_lump__link_propstat2_collision_2'>
+        <pose>0.023 0 -0.0365 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_propstat2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_robot_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/base_link_robot.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_robot_fixed_joint_lump__link_propstat1_visual_1'>
+        <pose>-0.023 0 -0.0365 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_propstat1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_robot_fixed_joint_lump__link_propstat2_visual_2'>
+        <pose>0.023 0 -0.0365 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_propstat2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='act_proprotor1' type='revolute'>
+      <pose relative_to='base_link_robot'>-0.023 0 -0.0365 0 -0 0</pose>
+      <parent>base_link_robot</parent>
+      <child>link_proprotor1</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <effort>0 0.4 0</effort>
+          <velocity>0 0 0 0 0 3.14</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link_proprotor1'>
+      <pose relative_to='act_proprotor1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>1e-06 1.2e-05 -0.00606 0 -0 0</pose>
+        <mass>0.0069922</mass>
+        <inertia>
+          <ixx>2.9861e-07</ixx>
+          <ixy>-3.9546e-14</ixy>
+          <ixz>1.3231e-13</ixz>
+          <iyy>2.9861e-07</iyy>
+          <iyz>1.0601e-12</iyz>
+          <izz>4.2964e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_proprotor1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_proprotor1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link_proprotor1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_proprotor1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='act_proprotor2' type='revolute'>
+      <pose relative_to='base_link_robot'>0.023 0 -0.0365 0 -0 0</pose>
+      <parent>base_link_robot</parent>
+      <child>link_proprotor2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <effort>0 0.4 0</effort>
+          <velocity>0 0 0 0 0 -3.14</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link_proprotor2'>
+      <pose relative_to='act_proprotor2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>5e-06 -1.1e-05 -0.00606 0 -0 0</pose>
+        <mass>0.0069922</mass>
+        <inertia>
+          <ixx>2.9861e-07</ixx>
+          <ixy>1.1939e-13</ixy>
+          <ixz>4.2698e-13</ixz>
+          <iyy>2.9861e-07</iyy>
+          <iyz>-9.7932e-13</iyz>
+          <izz>4.2964e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_proprotor2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_proprotor2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link_proprotor2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://swimming_robot/world/meshes/link_proprotor2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

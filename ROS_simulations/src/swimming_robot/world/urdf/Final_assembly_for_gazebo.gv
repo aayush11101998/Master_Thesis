@@ -1,0 +1,62 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"link_1" [label="link_1"];
+"link_2" [label="link_2"];
+"link_3" [label="link_3"];
+"link_5" [label="link_5"];
+"link_13" [label="link_13"];
+"link_14" [label="link_14"];
+"link_15" [label="link_15"];
+"link_16" [label="link_16"];
+"link_17" [label="link_17"];
+"link_19" [label="link_19"];
+"link_18" [label="link_18"];
+"link_4" [label="link_4"];
+"link_6" [label="link_6"];
+"link_7" [label="link_7"];
+"link_8" [label="link_8"];
+"link_9" [label="link_9"];
+"link_10" [label="link_10"];
+"link_11" [label="link_11"];
+"link_12" [label="link_12"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "500_turn" [label="xyz: 0 0 10 \nrpy: 0 -0 0"]
+"500_turn" -> "link_1"
+"link_1" -> "500_to_200" [label="xyz: 0.50096 -0.032345 0.502 \nrpy: 0 1.5708 6.2187"]
+"500_to_200" -> "link_2"
+"link_2" -> "3way_200" [label="xyz: 0 0 0.7 \nrpy: -0.064494 0.0039682 -0.0041927"]
+"3way_200" -> "link_3"
+"link_3" -> "200mm_l" [label="xyz: -0.2002 0 0 \nrpy: 0 -1.5708 -0.000282082"]
+"200mm_l" -> "link_5"
+"link_5" -> "200_to_100" [label="xyz: -0.00079277 5.1186e-05 20 \nrpy: 0 -0 0"]
+"200_to_100" -> "link_13"
+"link_13" -> "100_l" [label="xyz: 0 0 0.199 \nrpy: 0 -0 0"]
+"100_l" -> "link_14"
+"link_14" -> "100_turn" [label="xyz: 0 0 5.001 \nrpy: 0 -0 0"]
+"100_turn" -> "link_15"
+"link_15" -> "100mm_l_1" [label="xyz: 0.10198 -0.0018724 0.102 \nrpy: 0 1.5708 -0.0225963"]
+"100mm_l_1" -> "link_16"
+"link_16" -> "3way_100_l" [label="xyz: 0 0 5.1 \nrpy: -0.018362 -0 -0.018356"]
+"3way_100_l" -> "link_17"
+"link_17" -> "100mm_l_l" [label="xyz: -0.15 0 0 \nrpy: 0 -1.5708 4.7124"]
+"100mm_l_l" -> "link_19"
+"link_17" -> "100mm_l_s" [label="xyz: 0 -0.0018361 0.099983 \nrpy: 0.018359 -0.00033702 0.018353"]
+"100mm_l_s" -> "link_18"
+"link_3" -> "200mm_s" [label="xyz: -0.00079365 -0.01289 0.19958 \nrpy: 0.064477 -0.0042302 0.0039283"]
+"200mm_s" -> "link_4"
+"link_4" -> "200mm_angle" [label="xyz: 0 0 20 \nrpy: 0 -0 0"]
+"200mm_angle" -> "link_6"
+"link_6" -> "200_to_100_s" [label="xyz: -0.034134 0.0021513 0.19397 \nrpy: -0.068018 -0.34264 0.13711"]
+"200_to_100_s" -> "link_7"
+"link_7" -> "100_turn_s" [label="xyz: 0 0 0.199 \nrpy: 0 0 -0.10711"]
+"100_turn_s" -> "link_8"
+"link_8" -> "100mm_s" [label="xyz: -0.10188 0.0049244 0.103 \nrpy: -1.5708 -1.5317 1.5225"]
+"100mm_s" -> "link_9"
+"link_9" -> "100mm_3way_s" [label="xyz: 0 0 5.1 \nrpy: 0 -0 0"]
+"100mm_3way_s" -> "link_10"
+"link_10" -> "100mm_s_r" [label="xyz: 0.14999 0.001268 0 \nrpy: 1.5708 1.5225 1.5792"]
+"100mm_s_r" -> "link_11"
+"link_10" -> "100mm_s_s" [label="xyz: 0 0 0.1 \nrpy: 0 -0 0"]
+"100mm_s_s" -> "link_12"
+}

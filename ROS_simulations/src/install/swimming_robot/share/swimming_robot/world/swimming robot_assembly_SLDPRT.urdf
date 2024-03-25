@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="swimming robot_assembly.SLDPRT">
+  <link
+    name="base_link_robot">
+    <inertial>
+      <origin
+        xyz="7.4125E-06 -8.4229E-05 -0.042499"
+        rpy="0 0 0" />
+      <mass
+        value="0.19172" />
+      <inertia
+        ixx="0.00011946"
+        ixy="-1.4904E-07"
+        ixz="-5.6919E-09"
+        iyy="0.00013306"
+        iyz="-1.6898E-09"
+        izz="0.00010433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/base_link_robot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/base_link_robot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_propstat1">
+    <inertial>
+      <origin
+        xyz="5.159E-08 -2.7266E-08 -0.0060013"
+        rpy="0 0 0" />
+      <mass
+        value="0.017641" />
+      <inertia
+        ixx="2.0434E-06"
+        ixy="2.1978E-12"
+        ixz="3.0688E-12"
+        iyy="2.0434E-06"
+        iyz="-1.9358E-12"
+        izz="3.7078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_propstat1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.83922 0.47059 0.36863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_propstat1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Act_propstat1"
+    type="fixed">
+    <origin
+      xyz="-0.023 0 -0.0365"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_robot" />
+    <child
+      link="link_propstat1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_proprotor1">
+    <inertial>
+      <origin
+        xyz="1.4773E-06 1.1834E-05 -0.0060597"
+        rpy="0 0 0" />
+      <mass
+        value="0.0069922" />
+      <inertia
+        ixx="2.9861E-07"
+        ixy="-3.9546E-14"
+        ixz="1.3231E-13"
+        iyy="2.9861E-07"
+        iyz="1.0601E-12"
+        izz="4.2964E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_proprotor1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_proprotor1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="act_proprotor1"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_propstat1" />
+    <child
+      link="link_proprotor1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_propstat2">
+    <inertial>
+      <origin
+        xyz="5.1697E-08 -2.7063E-08 -0.0060013"
+        rpy="0 0 0" />
+      <mass
+        value="0.017641" />
+      <inertia
+        ixx="2.0434E-06"
+        ixy="2.1376E-12"
+        ixz="3.0764E-12"
+        iyy="2.0434E-06"
+        iyz="-1.9238E-12"
+        izz="3.7078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_propstat2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.83922 0.47059 0.36863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_propstat2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="act_propstat2"
+    type="fixed">
+    <origin
+      xyz="0.023 0 -0.0365"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_robot" />
+    <child
+      link="link_propstat2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_proprotor2">
+    <inertial>
+      <origin
+        xyz="4.7657E-06 -1.0932E-05 -0.0060597"
+        rpy="0 0 0" />
+      <mass
+        value="0.0069922" />
+      <inertia
+        ixx="2.9861E-07"
+        ixy="1.1939E-13"
+        ixz="4.2698E-13"
+        iyy="2.9861E-07"
+        iyz="-9.7932E-13"
+        izz="4.2964E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_proprotor2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming robot_assembly.SLDPRT/meshes/link_proprotor2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="act_proprotor2"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_propstat2" />
+    <child
+      link="link_proprotor2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

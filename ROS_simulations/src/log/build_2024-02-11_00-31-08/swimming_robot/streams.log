@@ -1,0 +1,30 @@
+[0.807s] Invoking command in '/home/aayush/Thesis_implementation/src/build/swimming_robot': PYTHONPATH=/home/aayush/Thesis_implementation/src/build/swimming_robot/prefix_override:/home/aayush/Thesis_implementation/src/install/swimming_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/aayush/Thesis_implementation/src/build/swimming_robot/build --no-deps install_data
+[1.060s] running develop
+[1.228s] running egg_info
+[1.228s] creating swimming_robot.egg-info
+[1.228s] writing swimming_robot.egg-info/PKG-INFO
+[1.228s] writing dependency_links to swimming_robot.egg-info/dependency_links.txt
+[1.228s] writing entry points to swimming_robot.egg-info/entry_points.txt
+[1.229s] writing requirements to swimming_robot.egg-info/requires.txt
+[1.229s] writing top-level names to swimming_robot.egg-info/top_level.txt
+[1.229s] writing manifest file 'swimming_robot.egg-info/SOURCES.txt'
+[1.230s] reading manifest file 'swimming_robot.egg-info/SOURCES.txt'
+[1.231s] writing manifest file 'swimming_robot.egg-info/SOURCES.txt'
+[1.232s] running build_ext
+[1.232s] Creating /home/aayush/Thesis_implementation/src/install/swimming_robot/lib/python3.10/site-packages/swimming-robot.egg-link (link to .)
+[1.232s] Installing pipeline_spawner_node script to /home/aayush/Thesis_implementation/src/install/swimming_robot/lib/swimming_robot
+[1.233s] 
+[1.233s] Installed /home/aayush/Thesis_implementation/src/build/swimming_robot
+[1.233s] running install_data
+[1.233s] creating /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/launch
+[1.233s] copying launch/display_launch.py -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/launch
+[1.233s] copying launch/gazebo_launch.py -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/launch
+[1.233s] creating /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/resources
+[1.233s] copying resources/joint_names_Final_assembly_for gazebo.yaml -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/resources
+[1.240s] copying package.xml -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot
+[1.240s] creating /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/world
+[1.240s] copying world/urdf/Final_assembly_for_gazebo.urdf -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/world
+[1.240s] copying world/urdf/Pipeline.sdf -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/world
+[1.240s] copying world/urdf/model.config -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/world
+[1.241s] copying world/world.model -> /home/aayush/Thesis_implementation/src/install/swimming_robot/share/swimming_robot/world
+[1.266s] Invoked command in '/home/aayush/Thesis_implementation/src/build/swimming_robot' returned '0': PYTHONPATH=/home/aayush/Thesis_implementation/src/build/swimming_robot/prefix_override:/home/aayush/Thesis_implementation/src/install/swimming_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/aayush/Thesis_implementation/src/build/swimming_robot/build --no-deps install_data

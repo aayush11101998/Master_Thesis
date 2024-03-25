@@ -1,0 +1,17 @@
+[0.798s] Invoking command in '/home/aayush/Thesis_implementation/src/build/swimming_robot': PYTHONPATH=/home/aayush/Thesis_implementation/src/build/swimming_robot/prefix_override:/home/aayush/Thesis_implementation/src/install/swimming_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/aayush/Thesis_implementation/src/build/swimming_robot/build --no-deps install_data
+[1.043s] running develop
+[1.211s] running egg_info
+[1.212s] writing swimming_robot.egg-info/PKG-INFO
+[1.212s] writing dependency_links to swimming_robot.egg-info/dependency_links.txt
+[1.212s] writing entry points to swimming_robot.egg-info/entry_points.txt
+[1.212s] writing requirements to swimming_robot.egg-info/requires.txt
+[1.212s] writing top-level names to swimming_robot.egg-info/top_level.txt
+[1.214s] reading manifest file 'swimming_robot.egg-info/SOURCES.txt'
+[1.215s] writing manifest file 'swimming_robot.egg-info/SOURCES.txt'
+[1.216s] running build_ext
+[1.216s] Creating /home/aayush/Thesis_implementation/src/install/swimming_robot/lib/python3.10/site-packages/swimming-robot.egg-link (link to .)
+[1.217s] Installing pipeline_spawner_node script to /home/aayush/Thesis_implementation/src/install/swimming_robot/lib/swimming_robot
+[1.217s] 
+[1.217s] Installed /home/aayush/Thesis_implementation/src/build/swimming_robot
+[1.217s] running install_data
+[1.244s] Invoked command in '/home/aayush/Thesis_implementation/src/build/swimming_robot' returned '0': PYTHONPATH=/home/aayush/Thesis_implementation/src/build/swimming_robot/prefix_override:/home/aayush/Thesis_implementation/src/install/swimming_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/aayush/Thesis_implementation/src/build/swimming_robot/build --no-deps install_data

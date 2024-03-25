@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Final_assembly_for_gazebo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 -8.88178419700125E-16 5"
+        rpy="0 0 0" />
+      <mass
+        value="227.099449742699" />
+      <inertia
+        ixx="1899.64927428884"
+        ixy="-3.37445951098918E-30"
+        ixz="-3.54987407349455E-29"
+        iyy="1899.64927428884"
+        iyz="-6.93984196648275E-29"
+        izz="14.3077195326896" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/base_link_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.110325131087151 -0.00712335240271322 0.391445141676856"
+        rpy="0 0 0" />
+      <mass
+        value="10.156846659006" />
+      <inertia
+        ixx="0.79819759046928"
+        ixy="0.0102997348580349"
+        ixz="-0.155751894718721"
+        iyy="0.957052908615804"
+        iyz="0.0100564179941513"
+        izz="0.79753256845368" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_1_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="500_turn"
+    type="fixed">
+    <origin
+      xyz="0 0 10"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0 1.24344978758018E-14 0.214770646277699"
+        rpy="0 0 0" />
+      <mass
+        value="8.30369856273025" />
+      <inertia
+        ixx="0.314170071804714"
+        ixy="1.91350586269761E-17"
+        ixz="1.5559044756424E-15"
+        iyy="0.31417007180472"
+        iyz="6.53990750443256E-16"
+        izz="0.303526806742906" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_2_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="500_to_200"
+    type="fixed">
+    <origin
+      xyz="0.50096 -0.032345 0.502"
+      rpy="-3.0771 1.5708 3.1416" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.0263212332850991 7.95379828399945E-06 -0.000112465890046209"
+        rpy="0 0 0" />
+      <mass
+        value="2.14612966719197" />
+      <inertia
+        ixx="0.0380463084604612"
+        ixy="-2.307286573813E-06"
+        ixz="3.57131864072001E-05"
+        iyy="0.0433783495755942"
+        iyz="0.000926679292320655"
+        izz="0.029087801077149" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_3_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3way_200"
+    type="fixed">
+    <origin
+      xyz="0 0 0.7"
+      rpy="-0.064494 0.0039682 -0.0041927" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="7.105427357601E-15 0 10"
+        rpy="0 0 0" />
+      <mass
+        value="90.9302577655039" />
+      <inertia
+        ixx="3031.46781271762"
+        ixy="-6.81812943432185E-15"
+        ixz="5.59957050115959E-14"
+        iyy="3031.46781271762"
+        iyz="-1.32358360382945E-12"
+        izz="0.918441068560446" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_4_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="200mm_s"
+    type="fixed">
+    <origin
+      xyz="-0.00079365 -0.01289 0.19958"
+      rpy="0.064477 -0.0042302 0.0039283" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="-3.74334648061136E-05 -2.91356843984403E-06 0.100008552439299"
+        rpy="0 0 0" />
+      <mass
+        value="0.909235714674439" />
+      <inertia
+        ixx="0.00771494522311124"
+        ixy="-5.81890916238897E-06"
+        ixz="-0.000250497251026371"
+        iyy="0.00762279221600413"
+        iyz="1.57838215992843E-05"
+        izz="0.00909308344301014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_6_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="200mm_angle"
+    type="fixed">
+    <origin
+      xyz="0 0 20"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="-1.36779476633819E-13 -5.77315972805081E-14 0.0893155658047462"
+        rpy="0 0 0" />
+      <mass
+        value="0.769707679534599" />
+      <inertia
+        ixx="0.00525521266681794"
+        ixy="2.98155597433514E-18"
+        ixz="1.72279725207947E-16"
+        iyy="0.00525521266681791"
+        iyz="-1.64256629131554E-17"
+        izz="0.00573202844765503" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_7_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="200_to_100_s"
+    type="fixed">
+    <origin
+      xyz="-0.034134 0.0021513 0.19397"
+      rpy="-0.068018 -0.34264 0.13711" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_8">
+    <inertial>
+      <origin
+        xyz="-0.0225472719811091 0.00108982796349455 0.080426404832739"
+        rpy="0 0 0" />
+      <mass
+        value="0.416043746296635" />
+      <inertia
+        ixx="0.00133576509035691"
+        ixy="1.32133184154736E-05"
+        ixz="0.000264530112278994"
+        iyy="0.00160849459875086"
+        iyz="-1.27861283533507E-05"
+        izz="0.00133512642134575" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_8_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100_turn_s"
+    type="fixed">
+    <origin
+      xyz="0 0 0.199"
+      rpy="0 0 -0.10711" />
+    <parent
+      link="link_7" />
+    <child
+      link="link_8" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_9">
+    <inertial>
+      <origin
+        xyz="0 5.77315972805081E-15 2.5"
+        rpy="0 0 0" />
+      <mass
+        value="11.4228308884526" />
+      <inertia
+        ixx="23.8121313160335"
+        ixy="1.69309011255336E-15"
+        ixz="2.06579545136698E-14"
+        iyy="23.8121313160335"
+        iyz="5.12025317978004E-15"
+        izz="0.0291339301809244" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_9_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_s"
+    type="fixed">
+    <origin
+      xyz="-0.10188 0.0049244 0.103"
+      rpy="-1.5708 -1.5317 1.5225" />
+    <parent
+      link="link_8" />
+    <child
+      link="link_9" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_10">
+    <inertial>
+      <origin
+        xyz="0.0322743224664741 0.000283167158605213 8.23481656198055E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.633642304139999" />
+      <inertia
+        ixx="0.00263675532929599"
+        ixy="-1.20252475491983E-05"
+        ixz="1.38747647852704E-07"
+        iyy="0.00403472009265456"
+        iyz="-2.56062401303951E-07"
+        izz="0.00317033552043691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_10_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_3way_s"
+    type="fixed">
+    <origin
+      xyz="0 0 5.1"
+      rpy="0 0 0" />
+    <parent
+      link="link_9" />
+    <child
+      link="link_10" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_11">
+    <inertial>
+      <origin
+        xyz="-5.32907051820075E-15 -2.66453525910038E-15 4.99999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="22.845661776905" />
+      <inertia
+        ixx="190.409648737723"
+        ixy="-5.6621374255883E-15"
+        ixz="5.06915689979515E-13"
+        iyy="190.409648737723"
+        iyz="1.74275843051446E-14"
+        izz="0.0582678603616214" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_11_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_s_r"
+    type="fixed">
+    <origin
+      xyz="0.14999 0.001268 0"
+      rpy="1.5708 1.5225 1.5792" />
+    <parent
+      link="link_10" />
+    <child
+      link="link_11" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_12">
+    <inertial>
+      <origin
+        xyz="5.32907051820075E-14 -3.10862446895044E-15 2.49999999999989"
+        rpy="0 0 0" />
+      <mass
+        value="11.4228308884525" />
+      <inertia
+        ixx="23.812131316033"
+        ixy="-1.02695629777827E-15"
+        ixz="-5.44278164205103E-14"
+        iyy="23.812131316033"
+        iyz="5.43510549066983E-16"
+        izz="0.029133930180953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_12_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_s_s"
+    type="fixed">
+    <origin
+      xyz="0 0 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="link_10" />
+    <child
+      link="link_12" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="-0.000792770424639322 5.11862838195043E-05 9.9998059910218"
+        rpy="0 0 0" />
+      <mass
+        value="90.9302577655039" />
+      <inertia
+        ixx="3031.46781271784"
+        ixy="-4.67074295906755E-16"
+        ixz="7.76058362537968E-15"
+        iyy="3031.46781271784"
+        iyz="-3.53022732574315E-14"
+        izz="0.918441068560457" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_5_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="200mm_l"
+    type="fixed">
+    <origin
+      xyz="-0.2002 0 0"
+      rpy="3.1371 -1.5668 -3.1374" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_13">
+    <inertial>
+      <origin
+        xyz="7.105427357601E-15 -7.105427357601E-15 0.0893155658047604"
+        rpy="0 0 0" />
+      <mass
+        value="0.769707679534585" />
+      <inertia
+        ixx="0.00525521266681814"
+        ixy="2.5090024141985E-17"
+        ixz="-1.17948596751332E-16"
+        iyy="0.00525521266681821"
+        iyz="9.73596610233038E-17"
+        izz="0.00573202844765462" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_13_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="200_to_100"
+    type="fixed">
+    <origin
+      xyz="-0.00079277 5.1186E-05 20"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_13" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_14">
+    <inertial>
+      <origin
+        xyz="8.88178419700125E-16 0 2.50100000000003"
+        rpy="0 0 0" />
+      <mass
+        value="11.4228308884524" />
+      <inertia
+        ixx="23.8121313160333"
+        ixy="-3.60158409172529E-18"
+        ixz="-1.18774686808966E-15"
+        iyy="23.8121313160333"
+        iyz="-8.08265943324366E-16"
+        izz="0.0291339301809979" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_14_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100_l"
+    type="fixed">
+    <origin
+      xyz="0 0 0.199"
+      rpy="0 0 0" />
+    <parent
+      link="link_13" />
+    <child
+      link="link_14" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_15">
+    <inertial>
+      <origin
+        xyz="0.0225697913218896 -0.000414389231454315 0.0794264048327733"
+        rpy="0 0 0" />
+      <mass
+        value="0.416043746296427" />
+      <inertia
+        ixx="0.00133521875858108"
+        ixy="5.02916580726418E-06"
+        ixz="-0.000264794314703489"
+        iyy="0.00160904093052482"
+        iyz="4.86171585963675E-06"
+        izz="0.00133512642134501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_15_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100_turn"
+    type="fixed">
+    <origin
+      xyz="0 0 5.001"
+      rpy="0 0 0" />
+    <parent
+      link="link_14" />
+    <child
+      link="link_15" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_16">
+    <inertial>
+      <origin
+        xyz="0 -8.88178419700125E-16 2.50000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="11.4228308884525" />
+      <inertia
+        ixx="23.8121313160341"
+        ixy="-4.81792340398246E-18"
+        ixz="4.59565518235935E-15"
+        iyy="23.8121313160341"
+        iyz="-8.87926903167241E-15"
+        izz="0.0291339301809983" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_16_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_l_1"
+    type="fixed">
+    <origin
+      xyz="0.10198 -0.0018724 0.102"
+      rpy="1.5708 1.5666 1.5524" />
+    <parent
+      link="link_15" />
+    <child
+      link="link_16" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_17">
+    <inertial>
+      <origin
+        xyz="-0.0322755313206642 -8.84451978322431E-09 -4.41556609942495E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.633661310739336" />
+      <inertia
+        ixx="0.00263665918285533"
+        ixy="8.601975749112E-09"
+        ixz="1.14955651914931E-10"
+        iyy="0.00403501496627989"
+        iyz="1.58774107337185E-05"
+        izz="0.00317046998632458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_17.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_17_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3way_100_l"
+    type="fixed">
+    <origin
+      xyz="0 0 5.1"
+      rpy="-0.018362 0 -0.018356" />
+    <parent
+      link="link_16" />
+    <child
+      link="link_17" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_18">
+    <inertial>
+      <origin
+        xyz="0 8.88178419700125E-16 5"
+        rpy="0 0 0" />
+      <mass
+        value="22.845661776905" />
+      <inertia
+        ixx="190.409648737725"
+        ixy="1.00288700954909E-17"
+        ixz="3.67481957678443E-14"
+        iyy="190.409648737725"
+        iyz="-5.04707457558763E-14"
+        izz="0.0582678603619978" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_18.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_18_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_l_s"
+    type="fixed">
+    <origin
+      xyz="0 -0.0018361 0.099983"
+      rpy="0.018359 -0.00033702 0.018353" />
+    <parent
+      link="link_17" />
+    <child
+      link="link_18" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_19">
+    <inertial>
+      <origin
+        xyz="5.32907051820075E-15 8.88178419700125E-16 4.99999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="22.8456617769052" />
+      <inertia
+        ixx="190.409648737729"
+        ixy="-9.9855020085915E-17"
+        ixz="1.42877822474716E-14"
+        iyy="190.409648737729"
+        iyz="8.85620786775232E-14"
+        izz="0.0582678603619981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_19.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 0.1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://swimming_robot/world/meshes/link_19_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="100mm_l_l"
+    type="fixed">
+    <origin
+      xyz="-0.15 0 0"
+      rpy="3.1416 -1.5708 1.5708" />
+    <parent
+      link="link_17" />
+    <child
+      link="link_19" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

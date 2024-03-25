@@ -1,0 +1,21 @@
+package.xml
+setup.cfg
+setup.py
+launch/display_launch.py
+launch/gazebo_launch.py
+resources/joint_names_Final_assembly_for gazebo.yaml
+swimming_robot/__init__.py
+swimming_robot/pipeline_spawner.py
+swimming_robot.egg-info/PKG-INFO
+swimming_robot.egg-info/SOURCES.txt
+swimming_robot.egg-info/dependency_links.txt
+swimming_robot.egg-info/entry_points.txt
+swimming_robot.egg-info/requires.txt
+swimming_robot.egg-info/top_level.txt
+swimming_robot.egg-info/zip-safe
+world/world1.sdf
+world/urdf/Final_assembly_for_gazebo.urdf
+world/urdf/Pipeline.sdf
+world/urdf/model.config
+world/urdf/robot.sdf
+world/urdf/robot_new.sdf

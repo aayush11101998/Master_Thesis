@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"base_link_robot" [label="base_link_robot"];
+"link_propstat1" [label="link_propstat1"];
+"link_proprotor1" [label="link_proprotor1"];
+"link_propstat2" [label="link_propstat2"];
+"link_proprotor2" [label="link_proprotor2"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link_robot" -> "Act_propstat1" [label="xyz: -0.023 0 -0.0365 \nrpy: 0 -0 0"]
+"Act_propstat1" -> "link_propstat1"
+"link_propstat1" -> "act_proprotor1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"act_proprotor1" -> "link_proprotor1"
+"base_link_robot" -> "act_propstat2" [label="xyz: 0.023 0 -0.0365 \nrpy: 0 -0 0"]
+"act_propstat2" -> "link_propstat2"
+"link_propstat2" -> "act_proprotor2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"act_proprotor2" -> "link_proprotor2"
+}
