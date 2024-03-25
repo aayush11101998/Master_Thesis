@@ -4,16 +4,21 @@ function [FVG] = force_velocity_graph(FVG)
     FVG.velocity = file.velocity_500; %input xdata
     FVG.velocity1 = file.velocity_200; %input
     FVG.velocity2 = file.velocity_100; %input
+<<<<<<< HEAD
     FVG.velocity3 = file.rotational_velocity;
     
 %velocity = table2array(velocity);
 %velocity1 = table2array(velocity1);
 %velocity2 = table2array(velocity2);
+=======
+
+>>>>>>> bfdb4f1aa99411051da6a9108a01bafc6f59177e
 
     FVG.force = file.force_500; %output ydata
     FVG.force1 = file.force_200; %output
     FVG.force2 = file.force_100; %output
 
+<<<<<<< HEAD
     FVG.torque = file.torque_500;
     FVG.torque1 = file.torque_200;
     FVG.torque2 = file.torque_100_10;
@@ -25,6 +30,8 @@ function [FVG] = force_velocity_graph(FVG)
 %force = table2array(force);
 %force1 = table2array(force1);
 %force2 = table2array(force2);
+=======
+>>>>>>> bfdb4f1aa99411051da6a9108a01bafc6f59177e
     
     FVG.lim = [0,15];
     FVG.lim1 = [0,15];
@@ -54,6 +61,7 @@ function [FVG] = force_velocity_graph(FVG)
     FVG.Coefficient_t1 = cof(1);
     FVG.Coefficient_t2 = cof(2);
 
+<<<<<<< HEAD
     FVG.Coefficient_t3 = cof1(1);
     FVG.Coefficient_t4 = cof1(2);
 
@@ -72,4 +80,6 @@ figure(5); plot(FVG.velocity3, FVG.torque1, 'o-', FVG.velocity3, fun1(cof1,FVG.v
 figure(6); plot(FVG.velocity3, FVG.torque2, 'o-', FVG.velocity3, fun1(cof2,FVG.velocity3), 'rd-'); legend('original data','fitted data'); xlabel('rot\_velocity (rad/sec)'); ylabel('torque (Nm)'); title('torque vs rot\_velocity(100mm)'); grid on;
 figure(7); plot(FVG.velocity3, FVG.torque3, 'o-', FVG.velocity3, fun1(cof3,FVG.velocity3), 'rd-'); legend('original data','fitted data'); xlabel('rot\_velocity (rad/sec)'); ylabel('torque (Nm)'); title('torque vs rot\_velocity(100mm)'); grid on;
 %figure(4); plot(FVG.velocity3, FVG.torque3,'o-'); grid on;
+=======
+>>>>>>> bfdb4f1aa99411051da6a9108a01bafc6f59177e
 
