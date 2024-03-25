@@ -1,1 +1,0 @@
-costmap_2D:geometery_msgs:launch_ros:nav2_amcl:nav2_bringup:nav2_bt_navigator:nav2_common:nav2_controller:nav2_costmap_2d:nav2_dwb_controller:nav2_lifecycle_manager:nav2_msgs:nav2_planner:nav2_recoveries:nav2_rviz_plugins:nav2_waypoint_follower:navigation2:pluginlib:rclpy:rviz_default_plugins:slam_toolbox

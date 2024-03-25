@@ -1,1 +1,0 @@
-/home/aayush/Thesis_implementation/src/swimming_robot/launch/gazebo_launch.py
